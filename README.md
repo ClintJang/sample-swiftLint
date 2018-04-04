@@ -1,5 +1,5 @@
 # sample swiftLint
-[swiftLint](https://github.com/realm/SwiftLint) 사용하면 좋습니다. 
+[SwiftLint](https://github.com/realm/SwiftLint) 사용하면 좋습니다. 
 - GitHub's Swift Style Guide 기반으로 코드 스타일과 규칙을 적용하는 라이브러리입니다. 
 
 ## 왜? 사용하면 좋나요?

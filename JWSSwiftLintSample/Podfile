@@ -1,0 +1,8 @@
+use_frameworks!
+
+target 'JWSSwiftLintSample' do
+
+# test script path : /scripts/swiftlint.yml
+  pod 'SwiftLint'
+  
+end
