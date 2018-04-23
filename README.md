@@ -1,5 +1,5 @@
 # sample swiftLint
-[SwiftLint](https://github.com/realm/SwiftLint) 사용하면 좋습니다. 
+[SwiftLint](https://github.com/realm/SwiftLint/blob/master/README_KR.md) 사용하면 좋습니다. 
 - GitHub's Swift Style Guide 기반으로 코드 스타일과 규칙을 적용하는 라이브러리입니다. 
 
 ## 왜? 사용하면 좋나요?
@@ -14,10 +14,53 @@
 
 
 ## 기본 사용방법
-- 언제하지
+- 우선 룰에 대해 알아봅시다.
+
+### 1. 룰
+아래의 링크를 클릭해서 들어가면 현재까지의 룰 정보를 가져올 수 있습니다. 
+- 링크 : https://github.com/realm/SwiftLint/tree/master/Source/SwiftLintFramework/Rules
+들어가 보시면 다양한 룰들이 있습니다.
+
+예를 들어 Rules 폴더 안에 들어가보면, 경로: [/ConditionalReturnsOnNewlineRule.swift](https://github.com/realm/SwiftLint/blob/master/Source/SwiftLintFramework/Rules/ConditionalReturnsOnNewlineRule.swift) 의 swift파일이 있습니다.
+
+우리가 yaml 파일(swiftlint.yml)에서 사용을 한다면 <br />
+해당 스위프트 파일을 스네이크 표기법으로 사용하면됩니다.
+> 더 정확히는 룰 파일에 들어가서 identifier 를 확인합니다.
+```
+enabled_rules:
+  - conditional_returns_on_newline
+
+... (중략) ...
+
+```
+이렇게 하나하나 만들어진 룰들을 확인해서 적용해보며 테스트 해보면 됩니다. 
+개별 룰 들에 대한 테스트 한 것들에 대한 설명은 아래에 하나씩 작성해나갈 것입니다. 
+
 
 ## 자동수정 사용방법
+> 사용은 간단합니다. 기존 swiftlint에 autocorrect만 추가해서 실행하면됩니다.
+- 설정한 경로가 없다면, 기본 경로의 .swiftlint.yml 가 실행되겠죠.
+
+```
+if which swiftlint >/dev/null; then
+	swiftlint autocorrect
+else
+    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+fi
+```
+
+or 
+
+```
+	swiftlint autocorrect --path 지정파일경로 
+```
+
+
+### autocorrect는 왜 사용하나요?
+빌드시 자동으로 코드가 수정 됩니다. 여러 사람이 작업을 해서 올려도, 빌드만 하고 레파지토리에 반영한다면 공통된 스타일 가지게 된 상태로 소스 관리가 될 수 있죠.
+
 - 언제하지
+
 
 ## 커스텀 사용방법
 - 언제하지
