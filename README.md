@@ -63,6 +63,8 @@ or
 
 
 ## 커스텀 사용방법
+- enabled_rules: 사용할 룰
+- disabled_rules: 사용하지 않을 룰
 - 언제하지
 
 ## 셈플링
